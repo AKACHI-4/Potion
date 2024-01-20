@@ -30,6 +30,13 @@ export const Item = ({
   onExpand,
   expanded,
 }: ItemProps) => {
+  const handleExpand = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    onExpand?.();
+  };
+
   const ChevronIcon = expanded ? ChevronDown : ChevronRight;
 
   return (
@@ -48,7 +55,7 @@ export const Item = ({
         <div
           role="button"
           className="h-full rounded-sm hover:bg-neutral-300 dark:bg-neutral-600 mr-1"
-          onClick={() => {}}
+          onClick={handleExpand}
         >
           <ChevronIcon className="h-4 w-4 shrink-0 text-muted-foreground/50" />
         </div>
@@ -65,6 +72,12 @@ export const Item = ({
         <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
           <span className="text-xs">⌘</span>K
         </kbd>
+      )}
+
+      {!!id && (
+        <div className="ml-auto flex items-center gap-x-2">
+          <div />
+        </div>
       )}
     </div>
   );
