@@ -4,7 +4,7 @@ import { useCoverImage } from "@/hooks/use-cover-image";
 import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
 import { SingleImageDropzone } from "../single-image-dropzone";
 import { useState } from "react";
-import { useEdgeStore } from "../../lib/edgestore";
+import { useEdgeStore } from "@/lib/edgestore";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useParams } from "next/navigation";
