@@ -8,7 +8,7 @@ import { SearchCommand } from "@/components/search-command";
 
 import Navigation from "./_components/navigation";
 
-const mainLayout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();
 
   if (isLoading) {
@@ -34,4 +34,4 @@ const mainLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default mainLayout;
+export default Layout;

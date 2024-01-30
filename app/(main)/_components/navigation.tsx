@@ -14,8 +14,6 @@ import {
 import { useMediaQuery } from "usehooks-ts";
 
 import { cn } from "@/lib/utils";
-import { UserItem } from "./useritem";
-import { Item } from "./item";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
@@ -28,6 +26,8 @@ import {
 import { TrashBox } from "./trash-box";
 import { useSearch } from "@/hooks/use-search";
 import { useSettings } from "@/hooks/use-settings";
+import { UserItem } from "./useritem";
+import { Item } from "./item";
 import { Navbar } from "./navbar";
 
 export const Navigation = () => {
