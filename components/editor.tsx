@@ -7,7 +7,7 @@ import { BlockNoteEditor } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/react/style.css";
 
-import { useEdgeStore } from "@/lib/edgestore";
+import { useEdgeStore } from "../lib/edgestore";
 
 interface EditorProps {
   onChange: (value: string) => void;
